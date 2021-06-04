@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Bulbasaur</h5>
                     <p class="card-text">The Grass Type Starter Pokemon in the first generation.</p>
-                    <a href="#" class="btn btn-primary">More Detail</a>
+                    <DetailButton />
                 </div>
             </div> 
             <div class="card col" style="width: 18rem;">
@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Charmander</h5>
                     <p class="card-text">The Fire Type Starter Pokemon in the first generation.</p>
-                    <a @click="datasend" class="btn btn-primary">More Detail</a>
+                    <DetailButton />
                 </div>
             </div> 
             <div class="card col" style="width: 18rem;">
@@ -22,7 +22,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Squirtle</h5>
                     <p class="card-text">The Water Type Starter Pokemon in the first generation.</p>
-                    <a href="#" class="btn btn-primary">More Detail</a>
+                    <DetailButton />
                 </div>
             </div> 
        </div>
@@ -30,13 +30,24 @@
 </template>
 
 <script>
+import Axios from 'axios'
+import DetailButton from '@/components/DetailButton.vue'
 export default {
     name: "PokeCard",
     setup() {
-        let datasend = () => {
-            console.log(`Charizard`)
+        let datasend = async () => {
+            await Axios.get('https://pokeapi.co/api/v2/pokemon/charmander')
+                .then(res => {
+                    console.log(res.data)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
         }
         return {datasend}
+    },
+    components: {
+        DetailButton 
     }
 }
 </script>
