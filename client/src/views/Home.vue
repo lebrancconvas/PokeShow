@@ -4,17 +4,21 @@
     <h1>PokeShow</h1>
     <hr><br>
     <PokeCard />
+    <br>
+    <AddPokemon />
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue'
 import PokeCard from '@/components/PokeCard.vue'
+import AddPokemon from '@/components/AddPokemon.vue'
 export default {
   name: "Home",
   components: {
     Navbar,
-    PokeCard
+    PokeCard,
+    AddPokemon
   }
 }
 </script>

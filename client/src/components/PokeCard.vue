@@ -22,7 +22,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Squirtle</h5>
                     <p class="card-text">The Water Type Starter Pokemon in the first generation.</p>
-                    <DetailButton @click="showdata" />
+                    <DetailButton />
                 </div>
             </div> 
        </div>
@@ -30,18 +30,18 @@
 </template>
 
 <script>
-import {useStore} from 'vue'
+// import {useStore} from 'vue'
 // import Axios from 'axios'
 import DetailButton from '@/components/DetailButton.vue'
 export default {
     name: "PokeCard",
-    setup() {
-        const store = useStore()
-        let showdata = () => {
-            store.dispatch('changeData')
-        }
-        return {showdata}
-    },
+    // setup() {
+    //     const store = useStore()
+    //     let showdata = () => {
+    //         store.dispatch('changeData')
+    //     }
+    //     return {showdata}
+    // },
     components: {
         DetailButton 
     }
