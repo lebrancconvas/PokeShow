@@ -13,11 +13,11 @@
                 <div class="modal-body">
                     <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Name</label>
-                      <input type="text" class="form-control" v-model="pokemonname" id="exampleFormControlInput1" placeholder="Enter Your Pokemon Name.">
+                      <input type="text" class="form-control" v-model="pokemonname" id="exampleFormControlInput1" placeholder="Enter Your Pokemon Name." required>
                     </div>
                     <div class="mb-3">
                       <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                      <textarea class="form-control" v-model="pokemondescription" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <textarea class="form-control" v-model="pokemondescription" id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

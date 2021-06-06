@@ -9,13 +9,22 @@
             <div class="offcanvas-body">
                Name: {{$store.getters.getData}} 
             </div>
+            <button type="button" class="btn btn-primary" @click="formchange">Change</button>
         </div> 
     </div>
 </template>
 
 <script>
+import {useStore} from 'vue'
 export default {
-    name: "DetailButton"
+    name: "DetailButton",
+    setup() {
+        const store = useStore()
+        let formchange = () => {
+            store.dispatch('changeData')
+        }
+        return {formchange}
+    }
 }
 </script>
 
