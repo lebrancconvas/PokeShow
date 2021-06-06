@@ -14,7 +14,7 @@ export default createStore({
         async changeData(context) {
             try {
                 const response = await Axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
-                const data = response.data
+                const data = response.data.forms[0].name
                 const datastring = JSON.stringify(data)
                 context.commit('change', datastring)
             } catch (error) {
