@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Navbar />
     <h1>PokeShow</h1>
     <hr><br>
     <Search />
@@ -8,21 +7,20 @@
     <PokeCard />
     <br>
     <AddPokemon />
+    <br><br><br><br><br> 
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
 import PokeCard from '@/components/PokeCard.vue'
 import AddPokemon from '@/components/AddPokemon.vue'
 import Search from '@/components/Search.vue'
 export default {
   name: "Home",
   components: {
-    Navbar,
     PokeCard,
     AddPokemon,
-    Search 
+    Search
   }
 }
 </script>
