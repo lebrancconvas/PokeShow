@@ -3,6 +3,8 @@
     <Navbar />
     <h1>PokeShow</h1>
     <hr><br>
+    <Search />
+    <br><br> 
     <PokeCard />
     <br>
     <AddPokemon />
@@ -13,12 +15,14 @@
 import Navbar from '@/components/Navbar.vue'
 import PokeCard from '@/components/PokeCard.vue'
 import AddPokemon from '@/components/AddPokemon.vue'
+import Search from '@/components/Search.vue'
 export default {
   name: "Home",
   components: {
     Navbar,
     PokeCard,
-    AddPokemon
+    AddPokemon,
+    Search 
   }
 }
 </script>
