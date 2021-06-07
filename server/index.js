@@ -7,7 +7,8 @@ const api = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
 
 app.get('/', (req, res) => {
     axios.get(api).then(respond => {
-        res.send(respond.data.forms[0].name)
+        const data = JSON.stringify(respond.data, null, 2)
+        res.send(data)
     }).catch(err => {
         console.error(err)
     })

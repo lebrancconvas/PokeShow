@@ -32,13 +32,18 @@
 
 <script>
 import {ref} from 'vue'
+import Axios from 'axios'
 export default {
     name: "AddPokemon",
     setup() {
         let pokemonname = ref("")
         let pokemondescription = ref("")
         let confirmadd = () => {
-            console.log(`${pokemonname.value}\n${pokemondescription.value}`)
+            Axios.get(`https://pokeapi.co/api/v2/pokemon/${(pokemonname.value).toLowerCase()}`).then(res => {
+                console.log(res.data)
+            }).catch(err => {
+                console.error(err) 
+            })
         }
         return {pokemonname, pokemondescription, confirmadd}
     }
